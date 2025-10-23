@@ -1,0 +1,78 @@
+'''
+# ============= Help Section =============
+with st.expander("Help & Examples"):
+    st.markdown("""
+    ### Example Workflows:
+    
+    **Example 1: Simple Query**
+    - Input: `Ca_00001, Ca_00002`
+    - ID Type: Transcript ID
+    - Operation: Sequence Data
+    - Click "Add Search Query" then "Execute"
+    
+    **Example 2: Union of Two Searches**
+    - Query A: `Ca_00001` with GO-KEGG Analysis
+    - Query B: `Ca_00002` with PPI
+    - Combine: A ∪ B with Sequence Data
+    - This will show sequence data for both genes
+    
+    **Example 3: Intersection**
+    - Query A: Multiple IDs with high FPKM in specific tissue
+    - Query B: Multiple IDs from GO term search
+    - Combine: A ∩ B to find common genes
+    - Execute any operation on the intersection
+    
+    **Example 4: BLAST Analysis**
+    - Input: `Ca_00001, Ca_00002, Ca_00003`
+    - Operation: BLAST
+    - Execute to run NCBI BLAST on all CDS sequences
+    
+    **Example 5: Gene Structure + Primer Design Workflow**
+    - Query A: `Ca_00001` with Gene Structure (GSDS)
+    - Query B: Same gene with Primer Design (Cloning)
+    - View both gene structure and design primers
+    
+    **Example 6: Chain Operations (Multi-level)**
+    - Query A: 10 genes from Tissue A (FPKM > 100)
+    - Query B: 8 genes from Tissue B (FPKM > 100)
+    - Combine: A ∪ B → Save as Query C (15 unique genes)
+    - Query D: 12 genes from GO term "stress response"
+    - Combine: C ∩ D → Save as Query E (common genes)
+    - Execute any operation on Query E
+    - ✨ Continue chaining as much as needed!
+    
+    ### Available Operations:
+    
+    **Data Analysis:**
+    - Sequence Data, Biochemical Properties, GO-KEGG Analysis
+    - FPKM Matrix, Cellular Localization, Protein-Protein Interaction
+    - SNP Calling, Transcription Factor, Orthologs/Paralogs
+    
+    **Molecular Tools:**
+    - **BLAST**: Run NCBI BLAST on CDS sequences (uses external API)
+    - **Gene Structure (GSDS)**: Visualize intron-exon organization (uses external API)
+    - **Primer Design (Cloning)**: Design primers for gene cloning (Primer3Plus)
+    - **Primer Design (qRT-PCR)**: Design primers for expression analysis (NCBI Primer-BLAST)
+    - **CRISPR Design**: Design CRISPR constructs (CHOPCHOP)
+    
+    ### Set Operations:
+    - **Union (A ∪ B)**: All genes from both queries
+    - **Intersection (A ∩ B)**: Only genes common to both
+    - **Difference (A - B)**: Genes in A but not in B
+    - **Difference (B - A)**: Genes in B but not in A
+    - **Symmetric Difference (A △ B)**: Genes in either A or B, but not both
+    
+    ### Tips:
+    - 🔗 **Chain Operations**: After combining queries, click "Save as New Query" to save the result for further operations
+    - 📊 **Track Origins**: Queries created from set operations show a 🔗 icon and display their source
+    - 🔄 **Infinite Chaining**: You can combine saved queries with new ones repeatedly (A∪B→C, C∩D→E, etc.)
+    - 📈 **Build Complex Workflows**: Use multiple levels of set operations to narrow down gene lists
+    - 💾 **Clear Results**: Use "Clear Result" button to dismiss combined results without saving
+    - 🎯 **Strategic Approach**: Plan your query sequence - start broad, then narrow down with intersections
+    - Use different operations on the same set of genes to get comprehensive information
+    - Combine results from different analyses to find interesting gene patterns
+    - **Note**: BLAST, GSDS, and Primer Design operations require external API calls and may take time
+    - For Primer Design (Cloning) and CRISPR Design, copy sequences and paste into embedded tools
+    """)
+
+'''

@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+env/
+ENV/
+
+# virtual env
+venv/
+/.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Streamlit cache or config
+.streamlit/
+
+# Logs
+*.log
+
+# Images and binaries that shouldn't be tracked (optional)
+# *.png
+# *.svg
